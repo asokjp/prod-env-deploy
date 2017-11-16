@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    sidecar.istio.io/status: {{ .Values.istio.status }}
+  creationTimestamp: null
+  name: {{ .Values.configserver.name }}-{{ .Chart.Version }}
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        sidecar.istio.io/status: {{ .Values.istio.status }}
+      creationTimestamp: null
+      labels:
+        app: {{ .Values.configserver.name }}
+        version: {{ .Chart.Version }}
+    spec:
+      containers:
+      - image: {{ .Values.configserver.image.name }}
+        imagePullPolicy: {{ .Values.configserver.imagePullPolicy }}
+        name: {{ .Values.configserver.name }}
+        ports:
+        - containerPort: {{ .Values.configserver.port }}
+        resources: {}
+      {{ include "istioproxy" .  }}
+      {{ include "istioinitcontainers" .}}
+      {{ include "istiovolume" .}}
+status: {}
+---

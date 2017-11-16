@@ -1,0 +1,8 @@
+configserver:
+  name: configserver
+  image:
+    name: gcr.io/adroit-flare-179614/config-server-v1
+  imagePullPolicy: IfNotPresent
+  port: 8888
+istio:
+  status: injected-version-root@822a7ac3ca86-0.2.4-9c7c291eab0a522f8033decd0f5b031f5ed0e126

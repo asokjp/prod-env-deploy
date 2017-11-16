@@ -1,0 +1,15 @@
+name: configserver
+version: v1
+appVersion: v1
+description: Configuration server that reads configurations for the microservices.
+icon: 
+keywords:
+- configserver
+- configservice
+- configuration
+- properties
+home: 
+sources:
+maintainers:
+- name: Asok 
+  email: test@test.com
