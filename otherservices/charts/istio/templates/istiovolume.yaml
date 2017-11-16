@@ -1,0 +1,11 @@
+{{- define "istiovolume" -}}
+      volumes:
+      - emptyDir:
+          medium: Memory
+          sizeLimit: "0"
+        name: istio-envoy
+      - name: istio-certs
+        secret:
+          optional: true
+          secretName: istio.default
+{{- end -}}

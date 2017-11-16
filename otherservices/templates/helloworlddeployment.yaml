@@ -1,0 +1,34 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    sidecar.istio.io/status: {{ .Values.istio.status }}
+  creationTimestamp: null
+  name: {{ .Values.helloworld.name }}-{{ .Chart.Version }}
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        sidecar.istio.io/status: {{ .Values.istio.status }}
+      creationTimestamp: null
+      labels:
+        app: {{ .Values.helloworld.name }}
+        version: {{ .Chart.Version }}
+    spec:
+      containers:
+      - env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: {{ .Values.helloworld.spring.profiles }}
+        image: {{ .Values.helloworld.image.name }}
+        imagePullPolicy: {{ .Values.helloworld.imagePullPolicy }}
+        name: {{ .Values.helloworld.name }}
+        ports:
+        - containerPort: {{ .Values.helloworld.port }}
+        resources: {}
+      {{ include "istioproxy" .}}
+      {{ include "istioinitcontainers" .}}
+      {{ include "istiovolume" .}}
+status: {}
+---

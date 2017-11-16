@@ -1,0 +1,6 @@
+istio:
+  proxy:
+    image: docker.io/istio/proxy_debug:0.2.4
+  init:
+    image: docker.io/istio/proxy_init:0.2.4   
+  includeipranges: 10.60.0.0/14,10.63.240.0/20  

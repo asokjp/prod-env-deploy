@@ -1,0 +1,17 @@
+name: otherservices
+version: v1
+appVersion: v1
+description: These contains other services other than configserver
+icon: 
+keywords:
+- helloworld
+- helloworldservice
+- Claimant
+- Claimant service
+- Gateway
+- Gateway service
+home: 
+sources:
+maintainers:
+- name: Asok 
+  email: test@test.com

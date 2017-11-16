@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ .Values.gateway.name }}
+  annotations:
+    kubernetes.io/ingress.class: {{ .Values.ingress.class | quote}}
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /helloWorld/*
+        backend:
+          serviceName: {{ .Values.helloworld.name }}
+          servicePort: {{ .Values.helloworld.port }}
+      - path: /helloWorld/.*
+        backend:
+          serviceName: {{ .Values.helloworld.name }}
+          servicePort: {{ .Values.helloworld.port }}
+      - path: /message1
+        backend:
+          serviceName: {{ .Values.helloworld.name }}
+          servicePort: {{ .Values.helloworld.port }}
+      - path: /claimant
+        backend:
+          serviceName: {{ .Values.claimant.name }}
+          servicePort: {{ .Values.claimant.port }}
+      - path: /message
+        backend:
+          serviceName: {{ .Values.claimant.name }}
+          servicePort: {{ .Values.claimant.port }}

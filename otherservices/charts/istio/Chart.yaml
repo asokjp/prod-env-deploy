@@ -1,0 +1,17 @@
+name: istio
+version: v1
+appVersion: v1
+description:istio basic injection template.
+icon: 
+keywords:
+- istio
+- istio injection
+home: 
+sources:
+maintainers:
+- name: Asok 
+  email: test@test.com
+apiVersion: v1
+description: A istio injection templates
+name: istio
+version: 0.1.0

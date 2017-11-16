@@ -1,0 +1,10 @@
+# This file describes the version of services that are part of this release
+# on the STAGE environment to pass
+
+# lowercase name of the environment
+
+config-server: {{config-server-version}}
+
+claimant-service: {{claimant-service-version}}
+
+hello-world: {{hello-world-version}}
