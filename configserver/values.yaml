@@ -1,5 +1,5 @@
 configserver:
-  name: configserver
+  name: config-server
   version: 123
   image:
     name: gcr.io/adroit-flare-179614/config-server-v1
