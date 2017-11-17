@@ -5,6 +5,6 @@
 
 config-server: 1.0.0.M1-171116_101925-VERSION
 
-claimant-service: {{claimant-service-version}}
+claimant-service: 1.0.0.M1-171117_130525-VERSION
 
 hello-world: {{hello-world-version}}
