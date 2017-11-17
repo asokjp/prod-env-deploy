@@ -15,7 +15,7 @@ spec:
       creationTimestamp: null
       labels:
         app: {{ .Values.configserver.name }}
-        version: {{ .Chart.Version }}
+        version: {{ .Values.configserver.version }}
     spec:
       containers:
       - image: {{ .Values.configserver.image.name }}

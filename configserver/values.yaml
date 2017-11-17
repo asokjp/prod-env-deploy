@@ -1,5 +1,6 @@
 configserver:
   name: configserver
+  version: 123
   image:
     name: gcr.io/adroit-flare-179614/config-server-v1
   imagePullPolicy: IfNotPresent
