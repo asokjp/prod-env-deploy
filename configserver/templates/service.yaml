@@ -12,4 +12,6 @@ spec:
     - port: {{ .Values.configserver.port }}
       name: http
   selector:
-    app: {{ template "name" . }}
+    app: {{ .Values.configserver.name }}
+    name: {{ .Values.configserver.name }}
+  type: NodePort 
