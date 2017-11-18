@@ -1,5 +1,5 @@
-helloworld:
-  name: helloworld
+hello-world:
+  name: hello-world
   version: v1
   image:
     name: gcr.io/adroit-flare-179614/hello-world-v1
@@ -7,8 +7,8 @@ helloworld:
   port: 8081
   spring:
     profiles: dev
-claimant:
-  name: claimantservice
+claimant-service:
+  name: claimant-service
   version: v1
   image:
     name: gcr.io/adroit-flare-179614/claimant-service-v1

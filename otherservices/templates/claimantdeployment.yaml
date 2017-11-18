@@ -4,7 +4,7 @@ metadata:
   annotations:
     sidecar.istio.io/status: {{ .Values.istio.status }}
   creationTimestamp: null
-  name: {{ .Values.claimant.name }}-{{ .Chart.Version }}
+  name: {{ .Values.claimant-service.name }}-{{ .Chart.Version }}
 spec:
   replicas: 1
   strategy: {}
@@ -14,18 +14,18 @@ spec:
         sidecar.istio.io/status: {{ .Values.istio.status }}
       creationTimestamp: null
       labels:
-        app: {{ .Values.claimant.name }}
-        version: {{ .Values.claimant.version }}
+        app: {{ .Values.claimant-service.name }}
+        version: {{ .Values.claimant-service.version }}
     spec:
       containers:
       - env:
         - name: SPRING_PROFILES_ACTIVE
-          value: {{ .Values.claimant.spring.profiles }}
-        image: {{ .Values.claimant.image.name }}
-        imagePullPolicy: {{ .Values.claimant.imagePullPolicy }}
-        name: {{ .Values.claimant.name }}
+          value: {{ .Values.claimant-service.spring.profiles }}
+        image: {{ .Values.claimant-service.image.name }}
+        imagePullPolicy: {{ .Values.claimant-service.imagePullPolicy }}
+        name: {{ .Values.claimant-service.name }}
         ports:
-        - containerPort: {{ .Values.claimant.port }}
+        - containerPort: {{ .Values.claimant-service.port }}
         resources: {}
       {{ include "istioproxy" .}}
       {{ include "istioinitcontainers" .}}
