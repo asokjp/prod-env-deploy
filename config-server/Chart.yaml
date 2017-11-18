@@ -1,6 +1,6 @@
-name: configserver
+name: config-server
 version: v1
-appVersion: {{ .Values.configserver.version }}
+appVersion: v1
 description: Configuration server that reads configurations for the microservices.
 icon: 
 keywords:

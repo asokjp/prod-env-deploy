@@ -1,5 +1,6 @@
 helloworld:
   name: helloworld
+  version: v1
   image:
     name: gcr.io/adroit-flare-179614/hello-world-v1
   imagePullPolicy: IfNotPresent
@@ -8,6 +9,7 @@ helloworld:
     profiles: dev
 claimant:
   name: claimantservice
+  version: v1
   image:
     name: gcr.io/adroit-flare-179614/claimant-service-v1
   imagePullPolicy: IfNotPresent

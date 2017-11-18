@@ -15,7 +15,7 @@ spec:
       creationTimestamp: null
       labels:
         app: {{ .Values.helloworld.name }}
-        version: {{ .Chart.Version }}
+        version: {{ .Values.helloworld.version }}
     spec:
       containers:
       - env:

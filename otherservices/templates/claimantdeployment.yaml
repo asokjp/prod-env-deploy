@@ -15,7 +15,7 @@ spec:
       creationTimestamp: null
       labels:
         app: {{ .Values.claimant.name }}
-        version: {{ .Chart.Version }}
+        version: {{ .Values.claimant.version }}
     spec:
       containers:
       - env:
