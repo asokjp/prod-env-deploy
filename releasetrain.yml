@@ -3,7 +3,7 @@
 
 # lowercase name of the environment
 
-config-server: 1.0.0.M1-171118_181531-VERSION
+config-server: 1.0.0.M1-171118_182313-VERSION
 
 claimant-service: {{claimant-service-version}}
 
