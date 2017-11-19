@@ -1,7 +1,7 @@
 name: istio
 version: v1
 appVersion: v1
-description:istio basic injection template.
+description: istio basic injection template.
 icon: 
 keywords:
 - istio
