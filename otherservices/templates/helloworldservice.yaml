@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Values.hello-world.name }}
+  name: {{ index .Values "hello-world" "name" }}
   labels:
-    app: {{ .Values.hello-world.name }}
+    app: {{ index .Values "hello-world" "name" }}
     chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
@@ -12,4 +12,4 @@ spec:
     - port: {{ .Values.helloworldExternalHttpPort }}
       name: http
   selector:
-    app: {{ .Values.hello-world.name }}
+    app: {{ index .Values "hello-world" "name" }}
