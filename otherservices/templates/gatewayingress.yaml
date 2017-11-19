@@ -10,21 +10,21 @@ spec:
       paths:
       - path: /helloWorld/*
         backend:
-          serviceName: {{ .Values.helloworld.name }}
-          servicePort: {{ .Values.helloworld.port }}
+          serviceName: {{ index .Values "hello-world" "name" }}
+          servicePort: {{ index .Values "hello-world" "port" }}
       - path: /helloWorld/.*
         backend:
-          serviceName: {{ .Values.helloworld.name }}
-          servicePort: {{ .Values.helloworld.port }}
+          serviceName: {{ index .Values "hello-world" "name" }}
+          servicePort: {{ index .Values "hello-world" "port" }}
       - path: /message1
         backend:
-          serviceName: {{ .Values.helloworld.name }}
-          servicePort: {{ .Values.helloworld.port }}
+          serviceName: {{ index .Values "hello-world" "name" }}
+          servicePort: {{ index .Values "hello-world" "port" }}
       - path: /claimant
         backend:
-          serviceName: {{ .Values.claimant.name }}
-          servicePort: {{ .Values.claimant.port }}
+          serviceName: {{ index .Values "claimant-service" "name" }}
+          servicePort: {{ index .Values "claimant-service" "port" }}
       - path: /message
         backend:
-          serviceName: {{ .Values.claimant.name }}
-          servicePort: {{ .Values.claimant.port }}
+          serviceName: {{ index .Values "claimant-service" "name" }}
+          servicePort: {{ index .Values "claimant-service" "port" }}
