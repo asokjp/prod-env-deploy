@@ -3,13 +3,11 @@ kind: Service
 metadata:
   name: {{ index .Values "claimant-service" "name" }}
   labels:
-    app: {{ index .Values "claimant-service" "name" }}
-    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+    name: {{ index .Values "claimant-service" "name" }}
 spec:
   ports:
     - port: {{ .Values.claimantserviceExternalHttpPort }}
       name: http
   selector:
-    app: {{ index .Values "claimant-service" "name" }}
+    name: {{ index .Values "claimant-service" "name" }}
+  type: NodePort

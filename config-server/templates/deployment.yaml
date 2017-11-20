@@ -4,7 +4,7 @@ metadata:
   annotations:
     sidecar.istio.io/status: {{ .Values.istio.status }}
   creationTimestamp: null
-  name: {{ .Values.configserver.name }}-{{ .Chart.Version }}
+  name: {{ .Values.configserver.name }}-{{ .Values.configserver.version }}
 spec:
   replicas: 1
   strategy: {}
@@ -16,6 +16,7 @@ spec:
       labels:
         app: {{ .Values.configserver.name }}
         version: {{ .Values.configserver.version }}
+        name: {{ .Values.configserver.name }}
     spec:
       containers:
       - image: {{ .Values.configserver.image.name }}

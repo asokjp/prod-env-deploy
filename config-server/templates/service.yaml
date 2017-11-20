@@ -3,15 +3,11 @@ kind: Service
 metadata:
   name: {{ .Values.configserver.name }}
   labels:
-    app: {{ .Values.configserver.name }}
-    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+    name: {{ .Values.configserver.name }}
 spec:
   ports:
     - port: {{ .Values.configserver.port }}
       name: http
   selector:
-    app: {{ .Values.configserver.name }}
     name: {{ .Values.configserver.name }}
   type: NodePort
