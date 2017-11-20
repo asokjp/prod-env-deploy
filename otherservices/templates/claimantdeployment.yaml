@@ -4,7 +4,7 @@ metadata:
   annotations:
     sidecar.istio.io/status: {{ .Values.istio.status }}
   creationTimestamp: null
-  name: {{ index .Values "claimant-service" "name" }}-{{ index .Values "claimant-service" "version" }}
+  name: {{ index .Values "claimant-service" "name" }}-v1
 spec:
   replicas: 1
   strategy: {}
@@ -15,7 +15,7 @@ spec:
       creationTimestamp: null
       labels:
         app: {{ index .Values "claimant-service" "name" }}
-        version: {{ index .Values "claimant-service" "version" }}
+        version: v1
         name: {{ index .Values "claimant-service" "name" }}
     spec:
       containers:

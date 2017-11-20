@@ -13,4 +13,4 @@ spec:
           regex: "^(.*?;)?(user=jason)(;.*)?$"
   route:
   - labels:
-      version: {{version}}
+      version: v1
