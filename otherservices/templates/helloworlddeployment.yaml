@@ -4,7 +4,7 @@ metadata:
   annotations:
     sidecar.istio.io/status: {{ .Values.istio.status }}
   creationTimestamp: null
-  name: {{ index .Values "hello-world" "name" }}-{{ index .Values "hello-world" "version" }}
+  name: {{ index .Values "hello-world" "name" }}-{{ .Chart.Version }}
 spec:
   replicas: 1
   strategy: {}
