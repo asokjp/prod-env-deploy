@@ -1,10 +1,10 @@
 apiVersion: config.istio.io/v1alpha2
 kind: RouteRule
 metadata:
-  name: claimant-service-default
+  name: {{appName}}-default
 spec:
   destination:
-    name: claimant-service
+    name: {{appName}}
   precedence: 2
   match:
     request:
@@ -13,4 +13,4 @@ spec:
           regex: "^(.*?;)?(user=jason)(;.*)?$"
   route:
   - labels:
-      version: v1
+      version: {{version}}
