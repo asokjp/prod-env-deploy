@@ -1,10 +1,9 @@
 # This file describes the version of services that are part of this release
-# on the STAGE environment to pass
 
-# lowercase name of the environment
-
+config-server-release: London
 config-server: 1.0.0.M1-171119_041613-VERSION
-
+otherservices-release: London
 claimant-service: 1.0.0.M1-171118_182313-VERSION
 
 hello-world: 1.0.0.M1-171118_210415-VERSION
+
