@@ -3,7 +3,7 @@
 config-server-release: London
 config-server: 1.0.0.M1-171122_080408-VERSION
 otherservices-release: London
-claimant-service: 1.0.0.M1-171118_182313-VERSION
+claimant-service: 1.0.0.M1-171122_081129-VERSION
 
 hello-world: 1.0.0.M1-171118_210415-VERSION
 
