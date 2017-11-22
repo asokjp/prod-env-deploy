@@ -1,7 +1,7 @@
 # This file describes the version of services that are part of this release
 
 config-server-release: London
-config-server: 1.0.0.M1-171121_124841-VERSION
+config-server: 1.0.0.M1-171122_062107-VERSION
 otherservices-release: London
 claimant-service: 1.0.0.M1-171118_182313-VERSION
 
