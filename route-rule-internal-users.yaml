@@ -10,7 +10,7 @@ spec:
     request:
       headers:
         cookie:
-          regex: "^(.*?;)?(user=jason)(;.*)?$"
+          regex: "^(.*?;)?(user=asok)(;.*)?$"
   route:
   - labels:
       version: {{version}}
