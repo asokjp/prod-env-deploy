@@ -1,8 +1,8 @@
 # This file describes the version of services that are part of this release
 
-config-server-release: config-server-1
+config-server-release: config-server-171212-141231
 config-server: 1.0.0.M1-171212_093635-VERSION
-otherservices-release: otherservice-1
+otherservices-release: otherservices-171212-141231
 claimant-service: 1.0.0.M1-171212_131057-VERSION
 
 hello-world: 1.0.0.M1-171212_140325-VERSION
