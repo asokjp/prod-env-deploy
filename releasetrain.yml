@@ -2,7 +2,7 @@
 
 config-server-release: config-server-1
 config-server: 1.0.0.M1-180116_080938-VERSION
-otherservices-release: otherservice-1
+otherservices-release: otherservices-180117-115645
 claimant-service: 1.0.0.M1-180116_091637-VERSION
 
 hello-world: 1.0.0.M1-180117_103545-VERSION
