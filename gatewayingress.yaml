@@ -13,22 +13,22 @@ spec:
       paths:
       - path: /helloWorld/*
         backend:
-          serviceName: helloworld
+          serviceName: hello-world
           servicePort: 8081
       - path: /helloWorld/.*
         backend:
-          serviceName: helloworld
+          serviceName: hello-world
           servicePort: 8081
       - path: /message1
         backend:
-          serviceName: helloworld
+          serviceName: hello-world
           servicePort: 8081
       - path: /claimant
         backend:
-          serviceName: claimantservice
+          serviceName: claimant-service
           servicePort: 8082
       - path: /message
         backend:
-          serviceName: claimantservice
+          serviceName: claimant-service
           servicePort: 8082    
 ---
