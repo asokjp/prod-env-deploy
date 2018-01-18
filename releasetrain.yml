@@ -5,5 +5,5 @@ config-server: 1.0.0.M1-180118_111706-VERSION
 otherservices-release: otherservice-1
 claimant-service: 1.0.0.M1-180118_132419-VERSION
 
-hello-world: 1.0.0.M1-180118_130355-VERSION
+hello-world: 1.0.0.M1-180118_132906-VERSION
 
