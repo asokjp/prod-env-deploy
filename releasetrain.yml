@@ -1,7 +1,7 @@
 # This file describes the version of services that are part of this release
 
 config-server-release: config-server-1
-config-server: 1.0.0.M1-180119_085605-VERSION
+config-server: 1.0.0.M1-180120_173449-VERSION
 otherservices-release: otherservice-1
 claimant-service: 1.0.0.M1-180119_110025-VERSION
 
