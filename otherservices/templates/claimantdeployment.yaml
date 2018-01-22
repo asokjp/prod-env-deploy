@@ -1,3 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ index .Values "claimant-service" "name" }}
+  labels:
+    app: {{ index .Values "claimant-service" "name" }}
+spec:
+  ports:
+    - port: {{ .Values.claimantserviceExternalHttpPort }}
+      name: http
+  selector:
+    app: {{ index .Values "claimant-service" "name" }}
+---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:

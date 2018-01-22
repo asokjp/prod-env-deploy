@@ -1,3 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ index .Values "hello-world" "name" }}
+  labels:
+    app: {{ index .Values "hello-world" "name" }}
+spec:
+  ports:
+    - port: {{ .Values.helloworldExternalHttpPort }}
+      name: http
+  selector:
+    app: {{ index .Values "hello-world" "name" }}
+---
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
